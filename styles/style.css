@@ -34,7 +34,7 @@ h1, h2, h3, h4, h5, h6, p{
 h1 {
     width: 582px;
     font-family: 'Ubuntu', sans-serif;
-    font-weight: bold;
+    font-weight: 700;
     font-size: 32px;
     color: white;
     margin-top: 144px;
@@ -87,40 +87,45 @@ h2 {
     font-family: 'Ubuntu', sans-serif; 
     font-size: 34px;
     line-height: 1.5;
-    font-weight: 900;
+    font-weight: 700;
     text-align: center;
     margin-bottom: 60px;
 }
 
+.card {
+    width: 289px;
+}
+
 h3 {
     font-family: 'Ubuntu', sans-serif;
+    font-weight: 700;
     font-size: 26px;
     line-height: 1.2;
-    margin-top: 130px;
+    /* margin-top: 130px; */
+    padding-top: 150px;
     margin-bottom: 22px;
     text-align: center;
 }
 
 .card-text {
     font-family: 'Ubuntu', sans-serif;
-    font-weight: normal;
+    font-weight: 400;
     font-size: 15px;
-    width: 280px;
     text-align: center;
 }
 
 .card_one {
-    background: url(../images/icon-1.png) no-repeat top center;
+    background: url(../images/icon-1.png) no-repeat center top;
     display: block;
 }
 
 .card_two {
-    background: url(../images/icon-2.png) no-repeat top center;
+    background: url(../images/icon-2.png) no-repeat center top;
     display: block;
 }
 
 .card_three {
-    background: url(../images/icon-3.png) no-repeat top center;
+    background: url(../images/icon-3.png) no-repeat center top;
     display: block;
 }
 
@@ -140,18 +145,20 @@ h3 {
 .input {
     font-family: 'Ubuntu', sans-serif;
     font-size: 15px;
-    font-weight: normal;
+    font-weight: 400;
     line-height: 1.3;
-    padding: 11px 0 11px 28px;
-    width: 345px;
+    padding: 12px 0 12px 28px;
+    width: 340px;
     margin-bottom: 16px;
     box-sizing: border-box;
     border: 1px solid #bbbbbb;
 }
 
 .link_input {
-    width: 345px;
+    width: 342px;
     margin: 0;
+    border: 0;
+    padding: 20px 0;
 }
 
 /* class="footer" */
@@ -169,4 +176,94 @@ h3 {
     line-height: 1;
     color: white;
     text-align: center;
+}
+
+/* responsive */
+
+/* 992px  -  1200px */
+
+@media screen and (max-width: 1200px) {
+    .container {
+            width: 960px;
+        }
+}
+
+/* 768px  -  992px */
+@media screen and (max-width: 992px) {
+    .container {
+            width: 720px;
+        }
+
+    .logo {
+        margin-left: 160px;
+    }
+
+    .flex {
+        flex-direction: column;
+    }
+
+    h1 {
+        margin-top: 60px;
+        width: 400px;
+    }
+
+    .first_link {
+        margin-bottom: 50px;
+    }
+
+    .card_one,
+    .card_two {
+        margin-bottom: 50px;
+    }
+}
+
+/* 576px  -  768px */
+@media screen and (max-width:768px) {
+    .container {
+            width: 540px;
+        }
+
+    .logo {
+        margin-left: 74px;
+    }
+
+    /* h1 {
+        width: 450px;
+    }
+
+    .flex {
+        flex-direction: column;
+    } */
+}
+
+/* 0  -  576px */
+@media screen and (max-width: 576px) {
+    .container {
+            width: 90%;
+        }
+
+    .logo {
+        margin-left: 30px;
+    }
+    
+    .first_left {
+        display: flex;
+        flex-direction: column;
+        width: 80%;
+    }
+
+    h1,
+    .first_text {
+        width: 90%;
+    }
+
+    .input,
+    .link_input {
+        width: 95%;
+        padding-left: 14px;
+    }
+
+    .footer_text {
+        line-height: 1.5;
+    }
 }
